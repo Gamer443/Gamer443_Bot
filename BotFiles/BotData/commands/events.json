@@ -1,0 +1,1195 @@
+{
+  "command": [
+    {
+      "name": "User Joins Server",
+      "perms": [],
+      "actions": [
+        {
+          "name": "welcome_embed",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "1079369497208684656",
+          "color": "29FF00",
+          "title": "Willkommen",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Hi ${tempVars.newuser.user.tag}, willkommen auf dem Gamer443 - Community Discord ! Wir wünschen dir viel Spaß 🤝",
+          "thumbnail": "",
+          "image": "",
+          "footer": "",
+          "timestamp": "false",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "add-mitglied",
+          "category": "User Action",
+          "type": "Add Role to User",
+          "messageActionRows": [],
+          "user": "${tempVars.newuser.id}",
+          "rolename": "1079369496453718024"
+        },
+        {
+          "name": "add_user_count",
+          "category": "Variable",
+          "type": "Edit Variable",
+          "messageActionRows": [],
+          "varname": "usercount",
+          "savevartype": "temp",
+          "oper": "+",
+          "value": "1"
+        },
+        {
+          "name": "xp_set_0",
+          "category": "User Data",
+          "type": "Set User Data",
+          "messageActionRows": [],
+          "user": "${tempVars.newuser.id}",
+          "field": "xp",
+          "fieldvalue": "0"
+        }
+      ],
+      "var": {
+        "user": "newuser"
+      }
+    },
+    {
+      "name": "Any Message",
+      "perms": [],
+      "actions": [
+        {
+          "name": "add_xp",
+          "category": "User Data",
+          "type": "Edit User Data",
+          "messageActionRows": [],
+          "user": "${tempVars.msguser.id}",
+          "field": "xp",
+          "oper": "+",
+          "value": "1"
+        }
+      ],
+      "var": {}
+    },
+    {
+      "name": "User Kicked",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "kickuser"
+      }
+    },
+    {
+      "name": "User Banned",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "user": "banuser"
+      }
+    },
+    {
+      "name": "Bot Initialization",
+      "perms": [],
+      "actions": [],
+      "var": {}
+    },
+    {
+      "name": "Channel Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "createdchannel"
+      }
+    },
+    {
+      "name": "Channel Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "deletedchannel"
+      }
+    },
+    {
+      "name": "Channel Pins Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatepinschannel"
+      }
+    },
+    {
+      "name": "Channel Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatechannel"
+      }
+    },
+    {
+      "name": "Emoji Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "createdemoji"
+      }
+    },
+    {
+      "name": "Emoji Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "deletedemoji"
+      }
+    },
+    {
+      "name": "Emoji Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": "updatedemoji"
+      }
+    },
+    {
+      "name": "Guild Ban Remove",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Available",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Speaking",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Member Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Unavailable",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Guild Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Message Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Message Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Create",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Delete",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Role Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Typing Start",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "User Update",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Button Interaction",
+      "perms": [],
+      "actions": [
+        {
+          "name": "reaction_buttons",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "news_ping": [
+              {
+                "name": "check_news",
+                "category": "User Action",
+                "type": "Check If User Has Role",
+                "trueActions": [
+                  {
+                    "name": "remove_news",
+                    "category": "User Action",
+                    "type": "Remove Role From User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416584071827476",
+                    "reason": "--"
+                  },
+                  {
+                    "name": "delete_news_reaction",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "falseActions": [
+                  {
+                    "name": "add_news",
+                    "category": "User Action",
+                    "type": "Add Role to User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416584071827476"
+                  },
+                  {
+                    "name": "delete_news_reaction_1",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "messageActionRows": [],
+                "user": "${tempVars.buttoninteraction.member.id}",
+                "role": "1079416584071827476"
+              }
+            ],
+            "umfragen_ping": [
+              {
+                "name": "check_umfragen",
+                "category": "User Action",
+                "type": "Check If User Has Role",
+                "trueActions": [
+                  {
+                    "name": "remove_umfragen",
+                    "category": "User Action",
+                    "type": "Remove Role From User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416694478475365",
+                    "reason": "--"
+                  },
+                  {
+                    "name": "delete_umfragen",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "falseActions": [
+                  {
+                    "name": "add_umfragen",
+                    "category": "User Action",
+                    "type": "Add Role to User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416694478475365"
+                  },
+                  {
+                    "name": "delete_umfragen_1",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "messageActionRows": [],
+                "user": "${tempVars.buttoninteraction.member.id}",
+                "role": "1079416694478475365"
+              }
+            ],
+            "giveaways_ping": [
+              {
+                "name": "check_giveaways",
+                "category": "User Action",
+                "type": "Check If User Has Role",
+                "trueActions": [
+                  {
+                    "name": "remove_giveaways",
+                    "category": "User Action",
+                    "type": "Remove Role From User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416757011361822",
+                    "reason": "--"
+                  },
+                  {
+                    "name": "delete_giveaways_reaction",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "falseActions": [
+                  {
+                    "name": "add_giveaways",
+                    "category": "User Action",
+                    "type": "Add Role to User",
+                    "messageActionRows": [],
+                    "user": "${tempVars.buttoninteraction.member.id}",
+                    "rolename": "1079416757011361822"
+                  },
+                  {
+                    "name": "delete_giveaways_reaction_1",
+                    "category": "Interaction",
+                    "type": "Delete Interaction Reply",
+                    "messageActionRows": [],
+                    "interactionobject": "${tempVars.buttoninteraction}"
+                  }
+                ],
+                "messageActionRows": [],
+                "user": "${tempVars.buttoninteraction.member.id}",
+                "role": "1079416757011361822"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.buttoninteraction.customId}"
+        }
+      ],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Select Interaction",
+      "perms": [],
+      "actions": [],
+      "var": {
+        "channel": ""
+      }
+    },
+    {
+      "name": "Command Interaction",
+      "perms": [],
+      "actions": [
+        {
+          "name": "Switch-Case",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "test": [
+              {
+                "name": "Test-a",
+                "category": "Interaction",
+                "type": "Reply To Interaction With Message",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "messagetext": "It work !"
+              }
+            ],
+            "help": [
+              {
+                "name": "admin-help-menu-embed_1",
+                "category": "Message",
+                "type": "Send Embed",
+                "fields": [
+                  {
+                    "name": "/help",
+                    "value": "Zeigt dieses Menü an !",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/rank",
+                    "value": "Zeigt deine aktuelle Anzahl von XP an.\n(Soon / Bald)",
+                    "inline": "false"
+                  }
+                ],
+                "messageActionRows": [],
+                "channelname": "1079369497405825089",
+                "color": "3DFF79",
+                "title": "Help - Menu",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "Alle User commands.",
+                "thumbnail": "https://cdn.discordapp.com/attachments/1080183482820591707/1086343560850329722/Gamer443_PFP.jpg",
+                "image": "",
+                "footer": "Gamer443 - Bot |/help",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_help",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "admin-help": [
+              {
+                "name": "admin-help-menu-embed",
+                "category": "Message",
+                "type": "Send Embed",
+                "fields": [
+                  {
+                    "name": "/help",
+                    "value": "Shows the help menu for normal user´s.",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/admin-help (Team only)",
+                    "value": "Show this menu",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/ban [username] [reason] [time] - (Team only)",
+                    "value": "Ban an user !",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/kick [username] [reason] - (Team only)",
+                    "value": "Kick an user !",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/clear [amount] [channel] - (Team only)",
+                    "value": "Clear up to 100 messages !",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/mute [username] [reason] - (Team only)",
+                    "value": "Give any user the \"muted\" role",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/unmute [username] [reason] - (Team only)",
+                    "value": "Remove any user the \"muted\" role",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "/botactivity [activity] [steamurl] - (Team only)",
+                    "value": "Set the bot activity of the Gamer443 - Bot (the steam url must be real)",
+                    "inline": "false"
+                  }
+                ],
+                "messageActionRows": [],
+                "channelname": "1079419456431857726",
+                "color": "F0FF5C",
+                "title": "Admin - Help - Menu",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "All normal commands + admin commands !",
+                "thumbnail": "https://cdn.discordapp.com/attachments/1080183482820591707/1086343560850329722/Gamer443_PFP.jpg",
+                "image": "",
+                "footer": "Gamer443 - Bot |/help",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delte-help-admin",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "edit_variable_usercount": [
+              {
+                "name": "get_usercount",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "amount",
+                "varname": "count_to_add",
+                "savevartype": "temp"
+              },
+              {
+                "name": "setup",
+                "category": "Variable",
+                "type": "Edit Variable",
+                "messageActionRows": [],
+                "varname": "usercount",
+                "savevartype": "temp",
+                "oper": "+",
+                "value": "${tempVars.count_to_add}"
+              },
+              {
+                "name": "delete_usercount_edit",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.commandinteraction.commandName}"
+        },
+        {
+          "name": "Moderation-Switchcase",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "ban": [
+              {
+                "name": "get-username-ban",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "username",
+                "varname": "userban",
+                "savevartype": "temp"
+              },
+              {
+                "name": "get-ban-reason",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "reason",
+                "varname": "reason",
+                "savevartype": "temp"
+              },
+              {
+                "name": "get-ban-time",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "time",
+                "varname": "time",
+                "savevartype": "temp"
+              },
+              {
+                "name": "ban-user",
+                "category": "User Action",
+                "type": "Ban User",
+                "messageActionRows": [],
+                "user": "${tempVars.userban}",
+                "reason": "${tempVars.reason}",
+                "days": "${tempVars.time}"
+              },
+              {
+                "name": "User-ban-info",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "color": "68FF5E",
+                "title": "User got Banned",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "UserID : ${tempVars.userban}\nReason : ${tempVars.reasonban}\nTime [Days] : ${tempVars.timeban}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "ban-delete",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "kick": [
+              {
+                "name": "get_kick-user",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "username",
+                "varname": "userkick",
+                "savevartype": "temp"
+              },
+              {
+                "name": "Get_Reason_Kick",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "reason",
+                "varname": "reasonkick",
+                "savevartype": "temp"
+              },
+              {
+                "name": "kick_user",
+                "category": "User Action",
+                "type": "Kick User",
+                "messageActionRows": [],
+                "user": "${tempVars.userkick}",
+                "reason": "${tempVars.reasonkick}"
+              },
+              {
+                "name": "User_Kick_Info",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "color": "4DFF50",
+                "title": "User got Kicked",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "UserID : ${tempVars.userkick}\nReason : ${tempVars.reasonkick}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete-kick",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "mute": [
+              {
+                "name": "get_user_mute",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "username",
+                "varname": "usermute",
+                "savevartype": "temp"
+              },
+              {
+                "name": "get_reason_mute",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "reason",
+                "varname": "reasonmute",
+                "savevartype": "temp"
+              },
+              {
+                "name": "remove_roles",
+                "category": "User Action",
+                "type": "Remove Role From User",
+                "messageActionRows": [],
+                "user": "${tempVars.usermute}",
+                "rolename": "1079369496453718024",
+                "reason": "${tempVars.reasonmute}"
+              },
+              {
+                "name": "add_mute",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "messageActionRows": [],
+                "user": "${tempVars.usermute}",
+                "rolename": "1079416155950821428"
+              },
+              {
+                "name": "info_mute",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "${tempVars.commandinteraction.channel}",
+                "color": "FF0000",
+                "title": "User got Muted",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "User : ${tempVars.usermute}\nReason : ${tempVars.reasonmute}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help ",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "info_mute_1",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "color": "FF0000",
+                "title": "User got Muted",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "User : ${tempVars.usermute}\nReason : ${tempVars.reasonmute}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help ",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_mute",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "unmute": [
+              {
+                "name": "get_user_unmute",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "username",
+                "varname": "user_unmute",
+                "savevartype": "temp"
+              },
+              {
+                "name": "remove_mute",
+                "category": "User Action",
+                "type": "Remove Role From User",
+                "messageActionRows": [],
+                "user": "${tempVars.user_unmute}",
+                "rolename": "1079416155950821428",
+                "reason": "--"
+              },
+              {
+                "name": "add_member_mute",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "messageActionRows": [],
+                "user": "${tempVars.user_unmute}",
+                "rolename": "1079369496453718024"
+              },
+              {
+                "name": "info_unmute",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "color": "33FF5D",
+                "title": "User got unmuted !",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "User : ${tempVars.user_unmute}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help ",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_unmute",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.commandinteraction.commandName}"
+        },
+        {
+          "name": "other_commands",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "clear": [
+              {
+                "name": "get_amount",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "amount",
+                "varname": "amount_clear",
+                "savevartype": "temp"
+              },
+              {
+                "name": "get_channel_clear",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "channel",
+                "varname": "channel_clear",
+                "savevartype": "temp"
+              },
+              {
+                "name": "delete_messages",
+                "category": "Channel Action",
+                "type": "Delete All Messages",
+                "messageActionRows": [],
+                "channelname": "${tempVars.channel_clear}",
+                "msgcount": "${tempVars.amount_clear}"
+              },
+              {
+                "name": "info_clear",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "color": "8AFF52",
+                "title": "Channel got cleared",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "Channel : ${tempVars.channel_clear}\nAmount : ${tempVars.amount_clear}",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help ",
+                "timestamp": "BOOL_TRUE@@",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_clear",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "botactivity": [
+              {
+                "name": "get_game",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "activity",
+                "varname": "botactivity",
+                "savevartype": "temp"
+              },
+              {
+                "name": "steamurl_activity",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "steamurl",
+                "varname": "steamurl_actitv",
+                "savevartype": "temp"
+              },
+              {
+                "name": "set_activity",
+                "category": "Bot Action",
+                "type": "Set Bot Activity",
+                "messageActionRows": [],
+                "activityname": "${tempVars.botactivity}",
+                "activitytype": "PLAYING",
+                "streamurl": "${tempVars.steamurl_actitv}"
+              },
+              {
+                "name": "info_activity_bot",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "1084885980399554591",
+                "messagetext": "ACHTUNG !!! Die Bot activtiy wurde auf  \" ${tempVars.botactivity} \" geändert SOFORT überprüfen @Gamer443🦊#9745",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "end_activity_change",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "botactivity-auto": [
+              {
+                "name": "edit_bot_variab",
+                "category": "Variable",
+                "type": "Edit Variable",
+                "messageActionRows": [],
+                "varname": "auto_bot",
+                "savevartype": "temp",
+                "oper": "+",
+                "value": "1"
+              },
+              {
+                "name": "check_auto",
+                "category": "Variable",
+                "type": "Check Variable Value",
+                "trueActions": [
+                  {
+                    "name": "set_activity_1",
+                    "category": "Bot Action",
+                    "type": "Set Bot Activity",
+                    "messageActionRows": [],
+                    "activityname": "/help",
+                    "activitytype": "PLAYING",
+                    "streamurl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2829104383"
+                  },
+                  {
+                    "name": "wait_1",
+                    "category": "Control",
+                    "type": "Wait",
+                    "messageActionRows": [],
+                    "waitduration": "1",
+                    "unit": "minutes"
+                  },
+                  {
+                    "name": "bot_activity_2",
+                    "category": "Bot Action",
+                    "type": "Set Bot Activity",
+                    "messageActionRows": [],
+                    "activityname": "Olee war der erste Supporter den es auf dem Heutigen Discord Server gibt/gab",
+                    "activitytype": "PLAYING",
+                    "streamurl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2829104383"
+                  },
+                  {
+                    "name": "bot_status3",
+                    "category": "Bot Action",
+                    "type": "Set Bot Activity",
+                    "messageActionRows": [],
+                    "activityname": "Gamer443.de",
+                    "activitytype": "PLAYING",
+                    "streamurl": "https://steamcommunity.com/sharedfiles/filedetails/?id=2829104383"
+                  }
+                ],
+                "falseActions": [],
+                "messageActionRows": [],
+                "varname": "auto_bot",
+                "savevartype": "temp",
+                "compare": "equal to",
+                "value": "1"
+              }
+            ],
+            "react": [
+              {
+                "name": "reaction_menu",
+                "category": "Message",
+                "type": "Send Embed",
+                "fields": [
+                  {
+                    "name": "News",
+                    "value": "Reagiere mit \"📢\" um Pings für News zu erhalten.",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "Umfragen",
+                    "value": "Reagiere mit \"📊\" um Pings für Umfragen zu erhalten.",
+                    "inline": "false"
+                  },
+                  {
+                    "name": "Giveaways",
+                    "value": "Reagiere mit \"🎁\" um Pings für Giveaways zu erhalten.",
+                    "inline": "false"
+                  }
+                ],
+                "messageActionRows": [
+                  {
+                    "rowtype": "button",
+                    "buttons": [
+                      {
+                        "label": "News",
+                        "customid": "news_ping",
+                        "style": "PRIMARY",
+                        "emoji": "📢",
+                        "URL": "",
+                        "ephemeral": false
+                      },
+                      {
+                        "label": "Umfragen",
+                        "customid": "umfragen_ping",
+                        "style": "PRIMARY",
+                        "emoji": "📊",
+                        "URL": "",
+                        "ephemeral": false
+                      },
+                      {
+                        "label": "Giveaways",
+                        "customid": "giveaways_ping",
+                        "style": "PRIMARY",
+                        "emoji": "🎁",
+                        "URL": "",
+                        "ephemeral": false
+                      }
+                    ]
+                  }
+                ],
+                "channelname": "1085261227355287602",
+                "color": "57FFB7",
+                "title": "Reaction Menu",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "Wähle aus, für welche \"Ereignisse\" du einen Ping bekommen möchtest.",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help",
+                "timestamp": "false",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_react",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ],
+            "rank": [
+              {
+                "name": "get_user_rank",
+                "category": "Interaction",
+                "type": "Get Interaction Option",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}",
+                "optiontype": "STRING",
+                "commandoptionname": "username",
+                "varname": "user_rank_get",
+                "savevartype": "temp"
+              },
+              {
+                "name": "getUserxp",
+                "category": "User Data",
+                "type": "Get User Data",
+                "messageActionRows": [],
+                "user": "${tempVars.user_rank_get}",
+                "field": "xp",
+                "varname": "userxp",
+                "savevartype": "temp",
+                "vartype": "User"
+              },
+              {
+                "name": "rank_card",
+                "category": "Message",
+                "type": "Send Embed",
+                "messageActionRows": [],
+                "channelname": "1079369497405825089",
+                "color": "00FF0A",
+                "title": "Rank - Card",
+                "url": "",
+                "authorname": "",
+                "authorimageurl": "",
+                "authorlink": "",
+                "description": "Der User hat ${tempVars.userxp} XP !",
+                "thumbnail": "",
+                "image": "",
+                "footer": "Gamer443 - Bot | /help",
+                "timestamp": "false",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              },
+              {
+                "name": "delete_rank",
+                "category": "Interaction",
+                "type": "Delete Interaction Reply",
+                "messageActionRows": [],
+                "interactionobject": "${tempVars.commandinteraction}"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.commandinteraction.commandName}"
+        }
+      ],
+      "var": {
+        "channel": ""
+      }
+    }
+  ]
+}

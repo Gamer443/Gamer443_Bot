@@ -1,0 +1,576 @@
+{
+  "nodes": [
+    {
+      "type": "slash",
+      "name": "test",
+      "guid": "dc8d3840-b5b8-446d-af2e-1cf56cfdbc0c",
+      "outputs": [],
+      "inputs": [],
+      "x": 518,
+      "y": 178,
+      "description": "TEST!!!",
+      "options": [],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "kick",
+      "guid": "7cc7013c-05cd-4d3c-97ef-62c7f367cc98",
+      "outputs": [],
+      "inputs": [],
+      "x": 158,
+      "y": 170,
+      "description": "Simple Kick Command",
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to kick ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to kick the User",
+          "type": "STRING",
+          "required": false
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "ban",
+      "guid": "e179e1ff-9638-4802-848d-52802b137e00",
+      "outputs": [],
+      "inputs": [],
+      "x": 156,
+      "y": 317,
+      "description": "Simple Ban command !",
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to ban ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to ban the user ?",
+          "type": "STRING",
+          "required": false
+        },
+        {
+          "name": "time",
+          "description": "How long you want to ban ? [Days]",
+          "type": "STRING",
+          "required": false
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "mute",
+      "guid": "2e803a14-d52a-4d53-9243-800d0be18a8c",
+      "outputs": [],
+      "inputs": [],
+      "x": 330,
+      "y": 173,
+      "description": "Mute any User without OP",
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to mute ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to mute the user ?",
+          "type": "STRING",
+          "required": false
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "unmute",
+      "guid": "9a070fbc-f8ef-4c06-963f-a68f09b9b05c",
+      "outputs": [],
+      "inputs": [],
+      "x": 329,
+      "y": 316,
+      "description": "Unmute an User",
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to unmute ?",
+          "type": "USER",
+          "required": true
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "clear",
+      "guid": "d60a52a9-0c34-47d3-be83-bad1ae3cc1d3",
+      "outputs": [],
+      "inputs": [],
+      "x": 709,
+      "y": 178,
+      "description": "Clear all messages in any Channel !",
+      "options": [
+        {
+          "name": "amount",
+          "description": "How many messages do you want to delete ? [Maximum = 100]",
+          "type": "STRING",
+          "required": true
+        },
+        {
+          "name": "channel",
+          "description": "In which channel do you want to delete the messages ?",
+          "type": "CHANNEL",
+          "required": true
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "botactivity",
+      "guid": "e00ca14f-361f-4f91-8c4d-9b93d1dacc6d",
+      "outputs": [],
+      "inputs": [],
+      "x": 704,
+      "y": 324,
+      "description": "Set the botactivity !",
+      "options": [
+        {
+          "name": "activity",
+          "description": "Wich activity the bot should play ?",
+          "type": "STRING",
+          "required": true
+        },
+        {
+          "name": "steamurl",
+          "description": "Paste the Steam URL you want the bot to play",
+          "type": "STRING",
+          "required": false
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "admin-help",
+      "guid": "e80fa90a-ae91-4c5e-9732-e0b6c662985c",
+      "outputs": [],
+      "inputs": [],
+      "x": 515,
+      "y": 318,
+      "description": "Shows the Admin Command Help menu",
+      "options": [],
+      "ephemeral": false
+    },
+    {
+      "type": "response",
+      "name": "Reaction_Menu",
+      "guid": "c6228a7d-8d87-4364-acd2-a87d635540ff",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "News - Ping",
+          "value": "Reagiere mit \"📢\" um den News Ping zu erhalten.",
+          "inline": "false"
+        },
+        {
+          "name": "Umfragen - Ping",
+          "value": "Reagiere mit \"📊\" um den Ping Umfragen zu erhalten.",
+          "inline": "false"
+        },
+        {
+          "name": "Giveaway - Ping",
+          "value": "Reagiere mit \"🎁\" um den Ping für Giveaways zu erhalten.",
+          "inline": "false"
+        }
+      ],
+      "saveToVariable": "reaction_menu",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": ""
+        }
+      ],
+      "x": 950,
+      "y": 261,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "40AFFF",
+        "Rollen - Einstellungen ",
+        "",
+        "",
+        "",
+        "",
+        "Reagiere auf diese Naricht, um eine Rolle zu erhalten.",
+        "",
+        "",
+        "Gamer443 - Bot | /help",
+        "BOOL_TRUE@@",
+        "reaction_menu",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "listener_reaction",
+      "guid": "99c95963-f992-4baf-b8be-3ff8da1c382f",
+      "reactionFields": [
+        "📢",
+        "📊",
+        "🎁"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "📢",
+          "connections": [
+            "e3a45ccc-8a3d-42b2-8dcf-b14efa9e4263"
+          ]
+        },
+        {
+          "label": "📊",
+          "connections": [
+            "d518c13f-cc30-4826-a992-9e5780fd31dd"
+          ]
+        },
+        {
+          "label": "🎁",
+          "connections": [
+            "960bdfbe-9130-4069-be7c-8e2d8b9f694e"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "14f20a4c-182c-465c-82b8-f000fe0c0722"
+        }
+      ],
+      "x": 1327,
+      "y": 167,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.reaction_menu.id}",
+        "0",
+        "reactionemoji",
+        "reactionuser",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "add_Umfragen",
+      "guid": "d518c13f-cc30-4826-a992-9e5780fd31dd",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "99c95963-f992-4baf-b8be-3ff8da1c382f"
+        }
+      ],
+      "x": 1221,
+      "y": 496,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "<@${tempVars.reactionuser.id}>",
+        "1079416694478475365"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "add_News",
+      "guid": "e3a45ccc-8a3d-42b2-8dcf-b14efa9e4263",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "99c95963-f992-4baf-b8be-3ff8da1c382f"
+        }
+      ],
+      "x": 1217,
+      "y": 378,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "<@${tempVars.reactionuser.id}>",
+        "1079416584071827476"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "add_Giveaways",
+      "guid": "960bdfbe-9130-4069-be7c-8e2d8b9f694e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "99c95963-f992-4baf-b8be-3ff8da1c382f"
+        }
+      ],
+      "x": 1221,
+      "y": 612,
+      "rtype": "User Action",
+      "rsubtype": "Add Role to User",
+      "formdata": [
+        "<@${tempVars.reactionuser.id}>",
+        "1079416757011361822"
+      ],
+      "formnames": [
+        "user",
+        "roleName"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "slash",
+      "name": "botactivity-auto",
+      "guid": "45d791dd-622d-4502-bb20-969167c67d46",
+      "outputs": [],
+      "inputs": [],
+      "x": 157,
+      "y": 465,
+      "description": "Activate the auto Status from the Bot",
+      "options": [],
+      "ephemeral": false
+    },
+    {
+      "type": "response",
+      "name": "reaction_menu",
+      "guid": "14f20a4c-182c-465c-82b8-f000fe0c0722",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "Neuigkeiten - Ping",
+          "value": "Reagiere mit \"📢\" um die Pings für Neuigkeiten zu erhalten",
+          "inline": "false"
+        },
+        {
+          "name": "Umfragen - Ping",
+          "value": "Reagiere mit \"📊\" um die Pings für Umfragen zu erhalten",
+          "inline": "false"
+        },
+        {
+          "name": "Giveaway - Ping",
+          "value": "Reagiere mit \"🎁\" um die Pings für Giveways zu erhalten",
+          "inline": "false"
+        }
+      ],
+      "saveToVariable": "reaction_menu.id",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "99c95963-f992-4baf-b8be-3ff8da1c382f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ed8a6b60-833e-48b0-b812-62076ea7489d"
+        }
+      ],
+      "x": 1134,
+      "y": 160,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "66AFFF",
+        "Ping - Einstellungen",
+        "",
+        "",
+        "",
+        "",
+        "Stelle ein, welche Pings du erhalten möchtest.",
+        "",
+        "",
+        "Gamer443 - Bot | /help",
+        "false",
+        "reaction_menu.id",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "react",
+      "guid": "ed8a6b60-833e-48b0-b812-62076ea7489d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "14f20a4c-182c-465c-82b8-f000fe0c0722"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 947,
+      "y": 162
+    },
+    {
+      "type": "slash",
+      "name": "react",
+      "guid": "fb26af9b-1825-4e05-8b35-455b7663eede",
+      "outputs": [],
+      "inputs": [],
+      "x": 333,
+      "y": 468,
+      "description": "Send the reaction menu",
+      "options": [],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "edit_variable_usercount",
+      "guid": "82c97855-91ee-4269-9ab4-563c6cb53c85",
+      "outputs": [],
+      "inputs": [],
+      "x": 519,
+      "y": 471,
+      "description": "Admin only !",
+      "options": [
+        {
+          "name": "amount",
+          "description": "How would you add to the usercount?",
+          "type": "STRING",
+          "required": true
+        }
+      ],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "help",
+      "guid": "f7dac72a-828d-422f-9fb5-c9c4c7575308",
+      "outputs": [],
+      "inputs": [],
+      "x": 707,
+      "y": 474,
+      "description": "Zeigt dir alle Commands an, die jeder normale Nutzer benutzen kann ! ",
+      "options": [],
+      "ephemeral": false
+    },
+    {
+      "type": "slash",
+      "name": "rank",
+      "guid": "9a6d5fcc-0cf6-4127-a60b-3b578d65919d",
+      "outputs": [],
+      "inputs": [],
+      "x": 160,
+      "y": 601,
+      "description": "Siehe dir die XP Anzahl von jedem User an.",
+      "options": [
+        {
+          "name": "username",
+          "description": "Von welchem User möchtest du die XP Anzahl wissen ?",
+          "type": "USER",
+          "required": true
+        }
+      ],
+      "ephemeral": false
+    }
+  ]
+}

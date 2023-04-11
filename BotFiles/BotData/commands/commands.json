@@ -1,0 +1,259 @@
+{
+  "command": [
+    {
+      "name": "test",
+      "description": "TEST!!!",
+      "ephemeral": false,
+      "options": []
+    },
+    {
+      "name": "kick",
+      "description": "Simple Kick Command",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to kick ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to kick the User",
+          "type": "STRING",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "ban",
+      "description": "Simple Ban command !",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to ban ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to ban the user ?",
+          "type": "STRING",
+          "required": false
+        },
+        {
+          "name": "time",
+          "description": "How long you want to ban ? [Days]",
+          "type": "STRING",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "mute",
+      "description": "Mute any User without OP",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to mute ?",
+          "type": "USER",
+          "required": true
+        },
+        {
+          "name": "reason",
+          "description": "Why you want to mute the user ?",
+          "type": "STRING",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "unmute",
+      "description": "Unmute an User",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "username",
+          "description": "Wich user you want to unmute ?",
+          "type": "USER",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "description": "Clear all messages in any Channel !",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "amount",
+          "description": "How many messages do you want to delete ? [Maximum = 100]",
+          "type": "STRING",
+          "required": true
+        },
+        {
+          "name": "channel",
+          "description": "In which channel do you want to delete the messages ?",
+          "type": "CHANNEL",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "botactivity",
+      "description": "Set the botactivity !",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "activity",
+          "description": "Wich activity the bot should play ?",
+          "type": "STRING",
+          "required": true
+        },
+        {
+          "name": "steamurl",
+          "description": "Paste the Steam URL you want the bot to play",
+          "type": "STRING",
+          "required": false
+        }
+      ]
+    },
+    {
+      "name": "admin-help",
+      "description": "Shows the Admin Command Help menu",
+      "ephemeral": false,
+      "options": []
+    },
+    {
+      "name": "botactivity-auto",
+      "description": "Activate the auto Status from the Bot",
+      "ephemeral": false,
+      "options": []
+    },
+    {
+      "name": "react",
+      "actions": [
+        {
+          "name": "reaction_menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "Neuigkeiten - Ping",
+              "value": "Reagiere mit \"📢\" um die Pings für Neuigkeiten zu erhalten",
+              "inline": "false"
+            },
+            {
+              "name": "Umfragen - Ping",
+              "value": "Reagiere mit \"📊\" um die Pings für Umfragen zu erhalten",
+              "inline": "false"
+            },
+            {
+              "name": "Giveaway - Ping",
+              "value": "Reagiere mit \"🎁\" um die Pings für Giveways zu erhalten",
+              "inline": "false"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "66AFFF",
+          "title": "Ping - Einstellungen",
+          "url": "",
+          "authorname": "",
+          "authorimageurl": "",
+          "authorlink": "",
+          "description": "Stelle ein, welche Pings du erhalten möchtest.",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Gamer443 - Bot | /help",
+          "timestamp": "false",
+          "savetovariable": "reaction_menu.id",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "listener_reaction",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "📢": [
+              {
+                "name": "add_News",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "messageActionRows": [],
+                "user": "<@${tempVars.reactionuser.id}>",
+                "rolename": "1079416584071827476"
+              }
+            ],
+            "📊": [
+              {
+                "name": "add_Umfragen",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "messageActionRows": [],
+                "user": "<@${tempVars.reactionuser.id}>",
+                "rolename": "1079416694478475365"
+              }
+            ],
+            "🎁": [
+              {
+                "name": "add_Giveaways",
+                "category": "User Action",
+                "type": "Add Role to User",
+                "messageActionRows": [],
+                "user": "<@${tempVars.reactionuser.id}>",
+                "rolename": "1079416757011361822"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "message": "${tempVars.reaction_menu.id}",
+          "duration": "0",
+          "reactionemoji": "reactionemoji",
+          "reactionuser": "reactionuser",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "react",
+      "description": "Send the reaction menu",
+      "ephemeral": false,
+      "options": []
+    },
+    {
+      "name": "edit_variable_usercount",
+      "description": "Admin only !",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "amount",
+          "description": "How would you add to the usercount?",
+          "type": "STRING",
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "help",
+      "description": "Zeigt dir alle Commands an, die jeder normale Nutzer benutzen kann ! ",
+      "ephemeral": false,
+      "options": []
+    },
+    {
+      "name": "rank",
+      "description": "Siehe dir die XP Anzahl von jedem User an.",
+      "ephemeral": false,
+      "options": [
+        {
+          "name": "username",
+          "description": "Von welchem User möchtest du die XP Anzahl wissen ?",
+          "type": "USER",
+          "required": true
+        }
+      ]
+    }
+  ]
+}
